@@ -15,7 +15,5 @@ def read_dicom_file(filename):
     pixels = input.pixel_array
     return pixels
 
-def shared_dataset(data_xy)
-
 whole_set = map(read_dicom_file, input_files)
 
