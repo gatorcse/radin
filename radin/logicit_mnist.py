@@ -8,9 +8,14 @@ import numpy
 import dicom
 
 data_dir = os.getcwd() + '/sample_data/'
-inputFiles = []
+input_files = filter(lambda filename: filename.endswith(".dcm"), os.listdir(data_dir))
 
-for filename in os.listdir(data_dir):
+def read_dicom_file(filename):
+    input = dicom.read_file(data_dir + filename)
+    pixels = input.pixel_array
+    return pixels
 
-    # inputFiles.append(open(filename, 'r'))
-    print filename
+def shared_dataset(data_xy)
+
+whole_set = map(read_dicom_file, input_files)
+
